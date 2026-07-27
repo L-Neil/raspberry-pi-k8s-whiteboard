@@ -1,0 +1,21 @@
+{
+  "name": "shared-whiteboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small self-hosted collaborative whiteboard backed by JSON files.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@tldraw/sync-core": "3.1.0",
+    "@tldraw/tlschema": "3.1.0",
+    "express": "5.2.1",
+    "ws": "8.21.1"
+  }
+}

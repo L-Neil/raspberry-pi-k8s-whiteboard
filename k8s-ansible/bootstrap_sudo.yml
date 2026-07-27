@@ -1,0 +1,13 @@
+---
+- name: Enable passwordless sudo for each node user
+  hosts: k8s
+  become: true
+  tasks:
+    - name: Allow passwordless sudo for login user
+      ansible.builtin.copy:
+        dest: "/etc/sudoers.d/{{ ansible_user }}"
+        content: "{{ ansible_user }} ALL=(ALL) NOPASSWD:ALL\n"
+        owner: root
+        group: root
+        mode: "0440"
+        validate: "visudo -cf %s"

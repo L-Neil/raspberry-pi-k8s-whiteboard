@@ -1,0 +1,14 @@
+services:
+  whiteboard:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      AUTH_MODE: local
+      LOCAL_USER_EMAIL: user@example.invalid
+    volumes:
+      - whiteboard-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  whiteboard-data:

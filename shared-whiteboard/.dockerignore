@@ -1,0 +1,7 @@
+node_modules
+data
+k8s
+.git
+.github
+.env
+*.tar

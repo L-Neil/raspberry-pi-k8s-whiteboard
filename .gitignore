@@ -1,0 +1,15 @@
+.DS_Store
+.idea/
+.vscode/
+
+# Local Ansible settings and credentials
+k8s-ansible/inventory.ini
+k8s-ansible/.vault_pass
+k8s-ansible/*.retry
+*.pem
+id_*
+
+# Node.js and local application data
+**/node_modules/
+shared-whiteboard/data/
+shared-whiteboard/*.tar
